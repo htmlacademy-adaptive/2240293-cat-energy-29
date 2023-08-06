@@ -1,0 +1,27 @@
+.show-all {
+  position: relative;
+  padding-top: 78px;
+  text-align: center;
+}
+.show-all::before {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px;
+  content: "";
+  background: #D3D3D3 no-repeat center;
+}
+
+.show-all::after {
+  position: absolute;
+  top: 39px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  content: "";
+  background: #D3D3D3 no-repeat center;
+}
+

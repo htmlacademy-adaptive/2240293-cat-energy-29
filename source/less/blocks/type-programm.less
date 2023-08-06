@@ -1,0 +1,49 @@
+.type-programm {
+  position: relative;
+  .oswald;
+  font-size: 16px;
+  line-height: 18px;
+  color: #222222;
+  text-transform: uppercase;
+  padding-left: 45px;
+}
+
+.type-programm__radio {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+  border-radius: 50%;
+}
+
+.type-programm__item[type="radio"]:checked + .type-programm__radio::before {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin: 8.5px auto;
+  background-color: @color-grin;
+  border-radius: 50%;
+  content: "";
+}
+
+.type-programm__checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #CDCDCD;
+  margin-left: 2px;
+}
+
+.type-programm__item[type="checkbox"]:checked + .type-programm__checkbox::before {
+  display: block;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background-image: url(../../img/form/checkbox.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
