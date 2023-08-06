@@ -41,25 +41,28 @@
   text-transform: uppercase;
 }
 
-.example__slider{
+.example__slider {
   position: relative;
   width: 280px;
   height: 256px;
 }
 
-.example__image{
+.example__image {
   display: block;
   position: absolute;
   background-color: @color-grey-100;
+
   &--before {
     left: 0;
     top: 0;
   }
+
   &--after {
     right: 0;
     top: 0;
   }
 }
+
 .example__slider::before {
   position: absolute;
   top: 0;
@@ -76,9 +79,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50% ; -50%);
   content: "";
-  background-image: url(../../img/index/thumb.svg);
+  background-image: url("../../img/index/thumb.svg");
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
