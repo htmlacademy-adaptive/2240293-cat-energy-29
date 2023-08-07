@@ -1,6 +1,32 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 49px;
+    padding-bottom: 47px;
+  }
+}
+
 .advantages__list {
-  margin-top: 2px;
-  margin-bottom: 49px;
+  padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 37px 136px;
+    margin-right: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    gap: 75px;
+    margin-right: 0;
+  }
 }
 
 .advantages__item {
@@ -8,21 +34,45 @@
   padding-left: 80px;
   line-height: 18px;
   color: @color-dark;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
 
-  &:not(:last-child) {
-    margin-bottom: 26px;
-  }
-
-  &::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-color: @color-grin;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    min-width: 250px;
+    min-height: 280px;
+    padding: 40px 5px 57px 0;
+    align-items: end;
   }
 }
+
+.advantages__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: @color-grin;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
 
 .advantages__item--sheet::before {
   position: absolute;
@@ -34,6 +84,31 @@
   background-image: url("../../img/index/sheet.svg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--sheet::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 136px;
+    height: 280px;
+    background-image: url("../../img/index/1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 20px;
+  }
 }
 
 .advantages__item--powder::before {
@@ -46,6 +121,31 @@
   background-image: url("../../img/index/powder.svg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--powder::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 136px;
+    height: 280px;
+    background-image: url("../../img/index/2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 4px;
+  }
 }
 
 .advantages__item--eat::before {
@@ -58,6 +158,31 @@
   background-image: url("../../img/index/eat.svg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--eat::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 136px;
+    height: 280px;
+    background-image: url("../../img/index/3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 2px;
+  }
 }
 
 .advantages__item--watch::before {
@@ -70,4 +195,25 @@
   background-image: url("../../img/index/watch.svg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--watch::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 136px;
+    height: 280px;
+    background-image: url("../../img/index/4.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 }
