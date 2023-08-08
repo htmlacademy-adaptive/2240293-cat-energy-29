@@ -21,26 +21,26 @@ body {
 .button {
   display: block;
   .oswald;
-  padding: 8px 20px;
+  line-height: 20px;
   background-color: @color-grin;
   border: none;
   text-align: center;
   color: @color-white;
   text-decoration: none;
   text-transform: uppercase;
-  height: 100%;
   width: 100%;
-
-  &:hover {
-    background-color: @color-grin-b;
-  }
-
-  &:focus {
-    background-color: @color-grin-b;
-    color: rgba(255, 255, 255, 0.3);
-    outline: none;
-  }
 }
+
+.button:hover {
+  background-color: @color-grin-b;
+}
+
+.button:focus {
+  background-color: @color-grin-b;
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
 
 .button--background {
   background-color: @color-grey-200;

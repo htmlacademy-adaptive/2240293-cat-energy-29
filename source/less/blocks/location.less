@@ -1,5 +1,6 @@
 .location {
   position: relative;
+  background-color: @color-grey-200;
 }
 
 .location__wrapper {
@@ -8,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: @color-white;
+  background-color: @color-grey-200;
 
   @media (min-width: @tablet-width) {
     padding: 61px 70px;
@@ -20,6 +21,7 @@
     position: absolute;
     left: 110px;
     top: 95px;
+    background-color: @color-white;
   }
 }
 
@@ -61,8 +63,4 @@
   @media (min-width: @tablet-width) {
     min-height: 400px;
   }
-}
-
-.location--background {
-  background-color: @color-grey-200;
 }
