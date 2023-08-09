@@ -1,8 +1,34 @@
 .additional {
   padding-top: 25px;
   padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+}
+
+.additional__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .additional__list {
   margin-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 895px;
+  }
 }

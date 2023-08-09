@@ -2,6 +2,13 @@
   position: relative;
   padding-top: 78px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    padding-top: 160px;
+    background-color: transparent;
+    border: 2px solid @color-grey-200;
+  }
 }
 
 .show-all::before {
@@ -13,6 +20,11 @@
   height: 30px;
   content: "";
   background: #d3d3d3 no-repeat center;
+
+  @media (min-width: @tablet-width) {
+    top: 51px;
+    height: 60px;
+  }
 }
 
 .show-all::after {
@@ -24,4 +36,17 @@
   height: 2px;
   content: "";
   background: #d3d3d3 no-repeat center;
+
+  @media (min-width: @tablet-width) {
+    top: 81px;
+    width: 60px;
+  }
+}
+
+.show-all__button {
+  padding: 10px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 25px;
+  }
 }

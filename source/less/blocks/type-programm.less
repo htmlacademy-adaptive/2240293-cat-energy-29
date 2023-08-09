@@ -6,6 +6,16 @@
   color: #222222;
   text-transform: uppercase;
   padding-left: 45px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 23px;
+  }
 }
 
 .type-programm__radio {
@@ -22,7 +32,7 @@
   display: block;
   width: 13px;
   height: 13px;
-  margin: 8.5px auto;
+  margin: 8px;
   background-color: @color-grin;
   border-radius: 50%;
   content: "";

@@ -1,13 +1,21 @@
 .main-header {
   padding-top: 13px;
   padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 56px;
+  }
 }
 
 .main-header__logo {
   position: relative;
   display: block;
+  min-width: 200px;
   height: 100%;
-  padding-right: 10px;
+  margin-right: 10px;
 
   &:hover {
     opacity: 0.8;
@@ -17,13 +25,31 @@
     opacity: 0.6;
     outline: none;
   }
+
+  @media (min-width: @tablet-width) {
+    min-width: 175px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 202px;
+  }
 }
 
 .main-header__logo--transform {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  margin-left: 56px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 14px;
+    width: 118px;
+    height: 18px;
+  }
 }
 
 .main-header__toggle {
@@ -34,4 +60,20 @@
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
+
+  &--close {
+    background-image: url("../../img/toggle-close.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__nav {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }

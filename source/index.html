@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link  href="css/style.css" rel="stylesheet">
   </head>
@@ -15,9 +16,9 @@
         <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-header__nav main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">подбор программы</a></li>
+            <li class="main-nav__item main-nav__item--color main-nav__item--active"><a class="main-nav__link main-nav__link--color" href="index.html">главная</a></li>
+            <li class="main-nav__item main-nav__item--color"><a class="main-nav__link main-nav__link--color" href="catalog.html">каталог продукции</a></li>
+            <li class="main-nav__item main-nav__item--color"><a class="main-nav__link main-nav__link--color" href="form.html">подбор программы</a></li>
           </ul>
         </nav>
       </header>
@@ -25,19 +26,21 @@
     <main>
       <section class="promo">
         <div class="wrapper">
-          <h1 class="promo__title main-title main-title--light">Функциональное питание для котов</h1>
-          <p class="promo__desc promo__desc--light">Занялся собой? Займись котом!</p>
-          <img src="img/index/banner.png" width="280" height="270" alt="Питание для котиков со вкусом курицы.">
-          <a class="promo__link button" href="form.html">подобрать программу</a>
+          <div class="promo__wrapper">
+            <h1 class="promo__title main-title main-title--light">Функциональное питание для котов</h1>
+            <p class="promo__desc promo__desc--light">Занялся собой? Займись котом!</p>
+            <img src="img/index/banner.png" alt="Функциональное питание для котов со вкусом курицы" class="promo__image">
+            <a class="promo__link button" href="form.html">подобрать программу</a>
+          </div>
         </div>
       </section>
-      <div class="wrapper">
-        <article class="products products--slim">
+      <div class="wrapper products">
+        <article class="products__item products--slim">
           <h3 class="products__title">похудение</h3>
           <p class="products__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="products__link" href="catalog.html">каталог slim</a>
         </article>
-        <article class="products products--pro">
+        <article class="products__item products--pro">
           <h3 class="products__title">Набор массы</h3>
           <p class="products__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="products__link" href="catalog.html">каталог pro</a>
@@ -58,23 +61,25 @@
         <div class="wrapper">
           <h2 class="example__title">Живой пример</h2>
           <P class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </P>
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__number">5 кг</dt>
-              <dd class="example__description">снижение<br>веса</dd>
-            </div>
-            <div class="example__item">
-              <dt class="example__number">60 дней</dt>
-              <dd class="example__description">затрачено<br>времени</dd>
-            </div>
-          </dl>
-          <p class="example__text">Затраты на питание: 15 000 руб.</p>
+          <div class="example__wrapper">
+            <dl class="example__list">
+              <div class="example__item">
+                <dt class="example__number">5 кг</dt>
+                <dd class="example__description">снижение<br>веса</dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__number">60 дней</dt>
+                <dd class="example__description">затрачено<br>времени</dd>
+              </div>
+            </dl>
+            <p class="example__text">Затраты на питание: <span class="example__price"> 15 000 руб.</span></p>
+          </div>
           <div class="example__slider">
-            <div class="example__image example__image--before">
-              <img src="img/index/cat-before.png" width="280" height="256" alt="Кот Барис до диеты с кормом Cat Energy Slim.">
+            <div class="example__conteiner example__conteiner--before">
+              <img class="example__image example__image--before" src="img/index/cat-before.png" width="280" height="256" alt="Кот Барис до диеты с кормом Cat Energy Slim.">
             </div>
-            <div class="example__image example__image--after">
-              <img src="img/index/cat-after.png" width="280" height="256" alt="Кот Барис после диеты с кормом Cat Energy Slim.">
+            <div class="example__conteiner example__conteiner--after">
+              <img class="example__image example__image--after" src="img/index/cat-after.png" width="280" height="256" alt="Кот Барис после диеты с кормом Cat Energy Slim.">
             </div>
             <div class="slider__range-scale">
               <button class="range-bar"><span class="visually-hidden">Подлузунок до/после</span></button>
@@ -83,15 +88,15 @@
         </div>
       </section>
       <section class="location">
-        <div class="wrapper">
+        <div class="location__wrapper wrapper">
           <h2 class="location_title">приглашаем к сотрудничеству дилеров!</h2>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
         </div>
         <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
       </section>
     </main>
     <footer class="main-footer">
-      <div class="wrapper">
+      <div class="wrapper main-footer__wrapper">
         <a class="main-footer__logo" href="index.html" ><span class="visually-hidden">На главную</span>
           <img src="img/logo.svg" alt="Логотип сайта">
         </a>
@@ -118,8 +123,8 @@
             </a>
           </li>
         </ul>
-        <a class="main-footer__partner-logo" href="#" >HTML Academy
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35" fill="none">
+        <a class="main-footer__partner-link" href="#" > <span class="main-footer__partner-text"> HTML Academy </span>
+          <svg class="main-footer__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35" fill="none">
             <g clip-path="url(#clip0_2_112)">
               <path class="main-footer__icon" d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="#666666"/>
             </g>

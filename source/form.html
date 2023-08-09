@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link  href="css/style.css" rel="stylesheet">
   </head>
@@ -15,9 +16,9 @@
         <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-header__nav main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">подбор программы</a></li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="form.html">подбор программы</a></li>
           </ul>
         </nav>
       </header>
@@ -27,62 +28,58 @@
         <div class="wrapper">
           <h1 class="form-program__title main-title"> Подбор программы</h1>
           <p class="form-program__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        </div>
-        <fieldset class="form-program__group">
-          <legend class="visually-hidden">Данные кота</legend>
-          <div class="wrapper">
-            <label class="form-program__item personal-data">имя:<sup>*</sup>
-              <input class="personal-data__item" type="text" name="cat-name" value="Барсик" required>
-            </label>
-            <label class="form-program__item personal-data">Вес (кг):<sup>*</sup>
-              <input class="personal-data__item" type="number" name="cat-weight" value="7" required>
-            </label>
-            <label class="form-program__item personal-data">Возраст (лет):
-              <input class="personal-data__item" type="number" name="cat-age" value="7">
-            </label>
+          <div class="form-program__wrapper">
+            <div class="form-program__group">
+              <h2 class="visually-hidden">Данные кота</h2>
+              <label class="form-program__item personal-data">имя:<sup>*</sup>
+                <input class="personal-data__item" type="text" name="cat-name" value="Барсик" required>
+              </label>
+              <label class="form-program__item personal-data">Вес&nbsp;(кг):<sup>*</sup>
+                <input class="personal-data__item" type="number" name="cat-weight" value="7" required>
+              </label>
+              <label class="form-program__item personal-data">Возраст&nbsp;(лет):
+                <input class="personal-data__item" type="number" name="cat-age" value="7">
+              </label>
+            </div>
+            <div class="form-program__group">
+              <h2 class="visually-hidden">Вид программы</h2>
+              <div class="form-program__radio">
+                <label class="form-program__item type-programm">
+                  <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="slim" checked>
+                  <span class="type-programm__radio"></span>
+                  Похудение
+                </label>
+                <label class="form-program__item type-programm">
+                  <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="pro" >
+                  <span class="type-programm__radio "></span>
+                  Набор массы
+                </label>
+                <label class="form-program__item type-programm">
+                  <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="need-advice">
+                  <span class="type-programm__radio"></span>
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </div>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-program__group">
-          <legend class="visually-hidden">Вид программы</legend>
-          <div class="wrapper form-program__radio">
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="slim" checked>
-              <span class="type-programm__radio"></span>
-              Похудение
-            </label>
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="pro" >
-              <span class="type-programm__radio "></span>
-              Набор массы
-            </label>
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="need-advice">
-              <span class="type-programm__radio"></span>
-              Не знаю (Нужен ваш совет)
-            </label>
+          <div class="form-program__group">
+            <h2 class="form-program__subtitle">Контактные данные (владельца кота)</h2>
+            <div class="form-program__wrapper">
+              <label class="form-program__item personal-data">E&#8209;mail:<sup>*</sup>
+                <input class="personal-data__item personal-data__item--email" type="email" name="email" value="kuklachev@gmail.com" required>
+              </label>
+              <label class="form-program__item personal-data">Телефон:<sup>*</sup>
+                <input class="personal-data__item personal-data__item--phone" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
+              </label>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-program__group">
-          <div class="wrapper">
-            <legend class="form-program__subtitle">Контактные данные (владельца кота)</legend>
-            <label class="form-program__item personal-data">E-mail:<sup>*</sup>
-              <input class="personal-data__item personal-data__item--email" type="email" name="email" value="kuklachev@gmail.com" required>
-            </label>
-            <label class="form-program__item personal-data">Телефон:<sup>*</sup>
-              <input class="personal-data__item personal-data__item--phone" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="form-program__group">
-          <div class="wrapper">
-            <legend class="form-program__subtitle">Комментарий </legend>
+          <div class="form-program__group">
+            <h2 class="form-program__subtitle">Комментарий </h2>
             <label class="visually-hidden" for="comment">Комментарий</label>
             <textarea class="form-program__comment" name="comment" id="comment" cols="33" rows="10">Расскажите обо всех повадках кота</textarea>
           </div>
-        </fieldset>
-        <fieldset class="form-program__group">
-          <div class="wrapper">
-            <legend class="form-program__subtitle">Дополнительно</legend>
+          <div class="form-program__group form-program__group--checkbox">
+            <h2 class="form-program__subtitle">Дополнительно</h2>
             <label class="form-program__item type-programm">
               <input class="type-programm__item visually-hidden" type="checkbox" name="sweetener" checked>
               <span class="type-programm__checkbox"></span>
@@ -104,22 +101,22 @@
               витамины
             </label>
           </div>
-        </fieldset>
-        <div class="wrapper">
-          <input class="form-program__buttom button" type="submit" value="отправить заявку">
-          <p class="form-program__legend">* — Обязательные поля</p>
+          <div class="form-program__container-button">
+            <input class="form-program__buttom button" type="submit" value="отправить заявку">
+            <p class="form-program__legend">* — Обязательные поля</p>
+          </div>
         </div>
       </form>
-      <section class="location location--background">
-        <div class="wrapper">
+      <section class="location">
+        <div class="location__wrapper wrapper">
           <h2 class="location_title">приглашаем к сотрудничеству дилеров!</h2>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
         </div>
         <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
       </section>
     </main>
     <footer class="main-footer">
-      <div class="wrapper">
+      <div class="wrapper main-footer__wrapper">
         <a class="main-footer__logo" href="index.html" ><span class="visually-hidden">На главную</span>
           <img src="img/logo.svg" alt="Логотип сайта">
         </a>
@@ -146,8 +143,8 @@
             </a>
           </li>
         </ul>
-        <a class="main-footer__partner-logo" href="#" >HTML Academy
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35" fill="none">
+        <a class="main-footer__partner-link" href="#" > <span class="main-footer__partner-text"> HTML Academy </span>
+          <svg class="main-footer__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35" fill="none">
             <g clip-path="url(#clip0_2_112)">
               <path class="main-footer__icon" d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="#666666"/>
             </g>

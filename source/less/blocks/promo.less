@@ -1,17 +1,58 @@
 .promo {
+  background-color: #514f54;
   background-image:
     linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 60% ; #ffffff 60%),
     url("../../img/index/promo-background.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    background: @color-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 27px;
+    margin-top: -143px;
+    background-color: #514f54;
+    background-image:
+      linear-gradient(to left, rgba(104, 183, 56, 0.85) 50% ; #ffffff 50%),
+      url("../../img/index/promo-background--max.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 694px;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 420px;
+    margin-left: 90px;
+    margin-right: auto;
+    min-height: 810px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-top: 143px;
+    min-height: 285px;
+  }
 }
 
 .promo__title {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
 
 .promo__desc {
   .oswald;
+  color: @color-black;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -22,9 +63,43 @@
   &--light {
     color: @color-white;
   }
+
+  @media (min-width: @tablet-width) {
+    color: @color-black;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-top: 40px;
+  }
 }
 
 .promo__link {
-  margin-top: 4px;
+  margin-top: 3px;
   margin-bottom: 20px;
+  font-size: 14px;
+  padding: 8px 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 50px;
+    width: 244px;
+    font-size: 20px;
+    padding: 14px 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
+  }
+}
+
+.promo__image {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -20vw;
+  }
 }
