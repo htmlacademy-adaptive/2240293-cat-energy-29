@@ -10,6 +10,7 @@
 
 .advantages__list {
   padding-top: 10px;
+  counter-reset: advantages;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -46,6 +47,19 @@
     min-height: 280px;
     padding: 40px 5px 57px 0;
     align-items: end;
+    counter-increment: advantages;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: counter(advantages);
+      .oswald;
+      font-size: 280px;
+      line-height: 280px;
+      color: @color-grey-200;
+      z-index: -1;
+    }
   }
 }
 
@@ -73,7 +87,6 @@
   }
 }
 
-
 .advantages__item--sheet::before {
   position: absolute;
   left: 0;
@@ -89,25 +102,6 @@
     width: 80px;
     height: 80px;
     top: 40px;
-  }
-}
-
-.advantages__item--sheet::after {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    content: "";
-    width: 136px;
-    height: 280px;
-    background-image: url("../../img/index/1.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: 20px;
   }
 }
 
@@ -129,25 +123,6 @@
   }
 }
 
-.advantages__item--powder::after {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    content: "";
-    width: 136px;
-    height: 280px;
-    background-image: url("../../img/index/2.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: 4px;
-  }
-}
-
 .advantages__item--eat::before {
   position: absolute;
   left: 0;
@@ -163,25 +138,6 @@
     width: 80px;
     height: 80px;
     top: 40px;
-  }
-}
-
-.advantages__item--eat::after {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    content: "";
-    width: 136px;
-    height: 280px;
-    background-image: url("../../img/index/3.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: 2px;
   }
 }
 
@@ -203,17 +159,3 @@
   }
 }
 
-.advantages__item--watch::after {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    content: "";
-    width: 136px;
-    height: 280px;
-    background-image: url("../../img/index/4.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-}
