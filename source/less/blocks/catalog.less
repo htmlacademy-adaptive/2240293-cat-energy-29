@@ -6,6 +6,15 @@
   }
 }
 
+.catalog--wrapper {
+  @media (max-width: 767px) {
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
 .catalog__list {
   padding-top: 41px;
 
@@ -18,9 +27,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 84px;
-    grid-template-columns: auto auto auto auto;
-    gap: 62px 80px;
+    padding-top: 164px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 144px 80px;
   }
 }
 

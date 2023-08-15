@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: @desktop-width) {
     padding-top: 56px;
@@ -56,13 +57,26 @@
   width: 24px;
   height: 24px;
   border: none;
-  background-image: url("../../img/toggle.svg");
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 
-  &--close {
+  &--opened {
+    background-image: url("../../img/toggle.svg");
+  }
+
+  &--closed {
     background-image: url("../../img/toggle-close.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -70,10 +84,29 @@
   }
 }
 
-.main-header__nav {
-  display: none;
+.main-header__toggle--nojs {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
 
-  @media (min-width: @tablet-width) {
-    display: block;
+.main-header__nav {
+  @media (max-width: 767px) {
+    &--opened {
+      position: absolute;
+      left: 0;
+      top: 68px;
+      width: 100vw;
+      min-height: 196px;
+    }
+
+    &--closed {
+      display: none;
+    }
+
+    &--nojs {
+      display: block;
+      width: 100%;
+    }
   }
 }

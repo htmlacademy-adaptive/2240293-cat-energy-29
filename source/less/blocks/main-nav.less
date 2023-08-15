@@ -1,6 +1,17 @@
 .main-nav__list {
+  @media (max-width: 767px) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 196px;
+    z-index: 3;
+    background-color: @color-white;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
