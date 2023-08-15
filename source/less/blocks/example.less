@@ -7,7 +7,7 @@
     padding-top: 45px;
     padding-bottom: 101px;
     background-color: transparent;
-    background-image: linear-gradient(to bottom, @color-white 70% ; @color-grey-100 70%);
+    background-image: linear-gradient(to bottom, @color-white 50% ; @color-grey-100 50%);
   }
 }
 
@@ -44,9 +44,13 @@
 
 .example__item {
   width: 124px;
+  height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
 
   @media (min-width: @tablet-width) {
     width: 162px;
+    height: 72px;
 
     &:not(:last-child) {
       margin-right: 42px;
@@ -60,7 +64,6 @@
   font-size: 24px;
   line-height: 24px;
   margin-top: 14px;
-  margin-bottom: 7px;
   text-align: center;
   text-transform: uppercase;
 
@@ -68,18 +71,25 @@
     font-size: 30px;
     line-height: 37px;
     margin-top: 15px;
-    margin-bottom: 11px;
   }
 }
 
 .example__description {
+  width: 77px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 7px;
+  background-color: @color-grey-100;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    margin-top: 10px;
+    width: fit-content;
+    padding: 0 5px;
+    background-color: @color-white;
   }
 }
 
