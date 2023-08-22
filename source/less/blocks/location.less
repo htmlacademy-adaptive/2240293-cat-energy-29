@@ -1,6 +1,15 @@
 .location {
-  position: relative;
   background-color: @color-grey-200;
+}
+
+.location__container {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    min-width: 1440px;
+    max-width: 1680px;
+    padding: 0 110px;
+    margin: 0 auto;
+  }
 }
 
 .location__wrapper {
