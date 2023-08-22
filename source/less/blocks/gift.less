@@ -8,14 +8,25 @@
   margin: 35px auto 0;
   background:
     linear-gradient(rgba(104, 183, 56, 0.85) ; rgba(104, 183, 56, 0.85)),
-    url("../../img/catalog/cat.jpg") no-repeat center;
-  background-size: cover;
+    url("../../img/catalog/cat.jpg") center / cover no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background:
+      linear-gradient(rgba(104, 183, 56, 0.85) ; rgba(104, 183, 56, 0.85)),
+      url("../../img/catalog/cat@2x.jpg") center / cover no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
     width: auto;
     flex-direction: row;
     justify-content: end;
     padding: 70px 125px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    background:
+      linear-gradient(rgba(104, 183, 56, 0.85) ; rgba(104, 183, 56, 0.85)),
+      url("../../img/catalog/cat-tablet.jpg") center / cover no-repeat;
   }
 
   @media (min-width: @desktop-width) {

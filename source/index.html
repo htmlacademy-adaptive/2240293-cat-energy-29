@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link  href="css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="wrapper">
       <header class="main-header">
         <a class="main-header__logo" href="index.html" ><span class="visually-hidden">На главную</span>
-          <img src="img/logo-cat.svg" alt="Логотип сайта">
-          <img class="main-header__logo--transform" src="img/logo.svg" alt="Логотип сайта">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-cat-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-cat-tablet.svg">
+            <img src="img/logo-cat.svg" alt="Логотип сайта">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-header__logo--transform" src="img/logo.svg" alt="Логотип сайта">
+          </picture>
         </a>
         <button class="main-header__toggle main-header__toggle--opened main-header__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-header__nav main-header__nav--closed main-header__nav--nojs main-nav">
@@ -29,7 +43,11 @@
           <div class="promo__wrapper">
             <h1 class="promo__title main-title main-title--light">Функциональное питание для котов</h1>
             <p class="promo__desc promo__desc--light">Занялся собой? Займись котом!</p>
-            <img src="img/index/banner.png" alt="Функциональное питание для котов со вкусом курицы" class="promo__image">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/banner-desctop.png 1x, img/index/banner-desctop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index/banner-tablet.png 1x, img/index/banner-tablet@2x.png 2x">
+              <img src="img/index/banner.png" class="promo__image" srcset="img/index/banner@2x.png 2x" alt="Функциональное питание для котов со вкусом курицы">
+            </picture>
             <a class="promo__link button" href="form.html">подобрать программу</a>
           </div>
         </div>
@@ -76,11 +94,17 @@
           </div>
           <div class="example__slider">
             <div class="example__conteiner example__conteiner--before">
-              <img class="example__image example__image--before" src="img/index/cat-before.png" width="280" height="256" alt="Кот Барис до диеты с кормом Cat Energy Slim.">
-            </div>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/index/cat-before-tablet.png 1x, img/index/cat-before-tablet@2x.png 2x">
+                <img class="example__image example__image--before" src="img/index/cat-before.png" width="280" height="256" srcset="img/index/cat-before@2x.png 2x" alt="Кот Барис до диеты с кормом Cat Energy Slim.">
+              </picture>
+              </div>
             <div class="example__conteiner example__conteiner--after">
-              <img class="example__image example__image--after" src="img/index/cat-after.png" width="280" height="256" alt="Кот Барис после диеты с кормом Cat Energy Slim.">
-            </div>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/index/cat-after-tablet.png 1x, img/index/cat-after-tablet@2x.png 2x">
+                <img class="example__image example__image--after" src="img/index/cat-after.png" width="280" height="256" srcset="img/index/cat-after@2x.png 2x" alt="Кот Барис после диеты с кормом Cat Energy Slim.">
+              </picture>
+              </div>
             <div class="slider__range-scale">
               <button class="range-bar"><span class="visually-hidden">Подлузунок до/после</span></button>
             </div>
@@ -88,9 +112,11 @@
         </div>
       </section>
       <section class="location">
-        <div class="location__wrapper wrapper">
-          <h2 class="location_title">приглашаем к сотрудничеству дилеров!</h2>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
+        <div class="location__container">
+          <div class="location__wrapper">
+            <h2 class="location_title">приглашаем к сотрудничеству дилеров!</h2>
+            <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
+          </div>
         </div>
         <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
       </section>

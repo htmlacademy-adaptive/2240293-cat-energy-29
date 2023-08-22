@@ -1,10 +1,15 @@
 .promo {
-  background-color: #514f54;
-  background-image:
+  background:
     linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 60% ; #ffffff 60%),
-    url("../../img/index/promo-background.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
+    url("../../img/index/promo-background.jpg") top center no-repeat,
+    #514f54;
+
+  @media (min-resolution: 2dppx) {
+    background:
+      linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 60% ; #ffffff 60%) auto,
+      url("../../img/index/promo-background@2x.jpg")  top center/ 320px auto no-repeat,
+      #514f54;
+  }
 
   @media (min-width: @tablet-width) {
     background: @color-white;
@@ -13,13 +18,18 @@
   @media (min-width: @desktop-width) {
     padding-top: 27px;
     margin-top: -143px;
-    background-color: #514f54;
-    background-image:
+    background:
       linear-gradient(to left, rgba(104, 183, 56, 0.85) 50% ; #ffffff 50%),
-      url("../../img/index/promo-background--max.jpg");
-    background-repeat: no-repeat;
-    background-position: top right;
+      url("../../img/index/promo-background-desctop.jpg") top right no-repeat,
+      #514f54;
     min-height: 694px;
+
+    @media (min-resolution: 2dppx) {
+      background:
+        linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 50% ; #ffffff 50%) auto,
+        url("../../img/index/promo-background-desctop@2x.jpg")  top right/ 720px auto no-repeat,
+        #514f54;
+    }
   }
 }
 
@@ -32,12 +42,12 @@
     width: 420px;
     margin-left: 90px;
     margin-right: auto;
-    min-height: 810px;
+    min-height: 837px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 80px;
-    margin-top: 143px;
+    margin-top: 170px;
     min-height: 285px;
   }
 }
@@ -70,6 +80,7 @@
     line-height: 20px;
     text-align: left;
     padding-top: 40px;
+    padding-bottom: 0;
   }
 }
 
@@ -78,6 +89,7 @@
   margin-bottom: 20px;
   font-size: 14px;
   padding: 8px 20px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     margin-top: 50px;
@@ -92,14 +104,18 @@
 }
 
 .promo__image {
+  display: block;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     bottom: 0;
+    transform: translateX(-12%);
   }
 
   @media (min-width: @desktop-width) {
-    right: -20vw;
+    right: 13%;
+    top: 50%;
+    transform: translate(100%, -45%);
   }
 }
