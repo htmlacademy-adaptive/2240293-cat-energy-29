@@ -175,7 +175,7 @@
   }
 }
 
-.example__slider::before {
+.example__range-scale::before {
   position: absolute;
   top: 0;
   left: 50%;
@@ -187,19 +187,22 @@
   z-index: 1;
 }
 
-.range-bar {
+.example_range-bar {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% ; -50%);
-  content: "";
-  background-image: url("../../img/index/thumb.svg");
   background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
+  stroke: #666666;
+  fill: #666666;
   border: none;
   width: 40px;
   height: 40px;
   cursor: pointer;
   z-index: 2;
+
+  &:hover {
+    stroke: @color-green;
+    fill: @color-green;
+  }
 }
