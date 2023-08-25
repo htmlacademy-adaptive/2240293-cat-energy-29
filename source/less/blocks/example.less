@@ -175,15 +175,24 @@
   }
 }
 
-.example__range-scale::before {
+.example__range-scale {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  content: "";
+  bottom: 0;
+  z-index: 3;
+  width: 40px;
+}
+
+.example__line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   background-color: #666666;
   width: 4px;
-  height: 100%;
   z-index: 1;
 }
 
@@ -194,15 +203,33 @@
   transform: translate(-50% ; -50%);
   background-color: transparent;
   stroke: #666666;
-  fill: #666666;
+  color: #666666;
   border: none;
   width: 40px;
   height: 40px;
   cursor: pointer;
   z-index: 2;
 
-  &:hover {
+  &:hover,
+  &:focus {
     stroke: @color-green;
-    fill: @color-green;
+    color: @color-green;
+    outline: none;
   }
+
+  &:active {
+    stroke: @color-green-b;
+    fill: @color-green-b;
+    opacity: 0.6;
+  }
+}
+
+.example_range-bar:hover + .example__line,
+.example_range-bar:focus + .example__line {
+  background-color: @color-green;
+}
+
+.example_range-bar:active + .example__line {
+  background-color: @color-green-b;
+  opacity: 0.6;
 }

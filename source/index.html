@@ -44,6 +44,9 @@
             <h1 class="promo__title main-title main-title--light">Функциональное питание для котов</h1>
             <p class="promo__desc promo__desc--light">Занялся собой? Займись котом!</p>
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/banner-desctop.webp 1x, img/index/banner-desctop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index/banner-tablet.webp 1x, img/index/banner-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/banner.webp 1x, iimg/index/banner@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/index/banner-desctop.png 1x, img/index/banner-desctop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/index/banner-tablet.png 1x, img/index/banner-tablet@2x.png 2x">
               <img src="img/index/banner.png" class="promo__image" srcset="img/index/banner@2x.png 2x" alt="Функциональное питание для котов со вкусом курицы">
@@ -98,19 +101,20 @@
                 <source media="(min-width: 768px)" srcset="img/index/cat-before-tablet.png 1x, img/index/cat-before-tablet@2x.png 2x">
                 <img class="example__image example__image--before" src="img/index/cat-before.png" width="280" height="256" srcset="img/index/cat-before@2x.png 2x" alt="Кот Барис до диеты с кормом Cat Energy Slim.">
               </picture>
-              </div>
+            </div>
             <div class="example__conteiner example__conteiner--after">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/index/cat-after-tablet.png 1x, img/index/cat-after-tablet@2x.png 2x">
                 <img class="example__image example__image--after" src="img/index/cat-after.png" width="280" height="256" srcset="img/index/cat-after@2x.png 2x" alt="Кот Барис после диеты с кормом Cat Energy Slim.">
               </picture>
-              </div>
+            </div>
             <div class="example__range-scale">
               <button class="example_range-bar"><span class="visually-hidden">Подлузунок до/после</span>
                 <svg  width="40" height="40">
                   <use href="img/sprite.svg#thumb"></use>
                 </svg>
               </button>
+              <div class="example__line"></div>
             </div>
           </div>
         </div>

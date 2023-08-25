@@ -44,8 +44,8 @@
   </symbol>
   <symbol id="thumb" viewBox="0 0 40 40" fill="none">
     <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
-    <path d="M16 11L8 20L16 29V11Z"/>
-    <path d="M32 20L24 11V29L32 20Z"/>
+    <path d="M16 11L8 20L16 29V11Z" fill="currentcolor"/>
+    <path d="M32 20L24 11V29L32 20Z" fill="currentcolor"/>
     <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
   </symbol>
 </svg>
