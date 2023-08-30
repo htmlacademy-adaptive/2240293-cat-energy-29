@@ -32,3 +32,41 @@
     width: 895px;
   }
 }
+
+.additional__title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin-left: -20px;
+  padding: 0 20px;
+  background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
+  }
+
+  &::before {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    background-color: @color-green;
+    width: 100vw;
+    height: 2px;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    background-color: @color-green;
+    width: 100vw;
+    height: 2px;
+    z-index: -1;
+  }
+}
