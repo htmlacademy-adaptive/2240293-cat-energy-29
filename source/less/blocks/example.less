@@ -196,13 +196,12 @@
   z-index: 1;
 }
 
-.example_range-bar {
+.example__range-bar {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% ; -50%);
   background-color: transparent;
-  stroke: #666666;
   color: #666666;
   border: none;
   width: 40px;
@@ -212,24 +211,22 @@
 
   &:hover,
   &:focus {
-    stroke: @color-green;
     color: @color-green;
     outline: none;
   }
 
   &:active {
-    stroke: @color-green-b;
-    fill: @color-green-b;
+    color: @color-green;
     opacity: 0.6;
   }
 }
 
-.example_range-bar:hover + .example__line,
-.example_range-bar:focus + .example__line {
+.example__range-bar:hover + .example__line,
+.example__range-bar:focus + .example__line {
   background-color: @color-green;
 }
 
-.example_range-bar:active + .example__line {
+.example__range-bar:active + .example__line {
   background-color: @color-green-b;
   opacity: 0.6;
 }
