@@ -30,14 +30,14 @@ export const styles = () => {
 
 //Html
 export const html = () => {
-  return gulp.src('sourсe/*.html')
+  return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
 //Scripts
 export const script = () => {
-  return gulp.src('sourсe/js/*.js')
+  return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
 }
@@ -45,19 +45,19 @@ export const script = () => {
 //Images
 
 export const optimizeImages = () => {
-  return gulp.src('sourсe/img/**/*.{jpeg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
 }
 
 export const copyImages = () => {
-  return gulp.src('sourсe/img/**/*.{jpeg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'));
 }
 
 //WebP
 export const creatWebp = () => {
-  return gulp.src('sourсe/img/**/*.{jpeg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh ({
       webp:{}
     }))
@@ -65,7 +65,7 @@ export const creatWebp = () => {
 }
 //Svg
 export const svg = () => {
-  return gulp.src(['sourсe/img/**/*.svg','!sourсe/img/icon/*.svg'])
+  return gulp.src(['source/img/**/*.svg','!source/img/icon/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
@@ -73,7 +73,7 @@ export const svg = () => {
 //Sprite
 
 export const sprite = () => {
-  return gulp.src('sourсe/img/icon/*.svg')
+  return gulp.src('source/img/icon/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
@@ -86,11 +86,11 @@ export const sprite = () => {
 
 export const copy = (done) => {
   gulp.src([
-    'sourсe/fonts/*.{woff2,woff}',
-    'sourсe/*.ico',
-    'sourсe/img/favicons/*.webmanifest'
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico',
+    'source/img/favicons/*.webmanifest'
   ], {
-    base: 'sourсe'
+    base: 'source'
   })
     .pipe(gulp.dest('build'))
   done();
