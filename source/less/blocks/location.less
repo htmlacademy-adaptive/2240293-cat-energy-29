@@ -19,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: @color-grey-200;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
     padding: 61px 70px;
@@ -65,11 +66,30 @@
 }
 
 .location__iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   min-height: 362px;
   border: none;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     min-height: 400px;
   }
+}
+
+.location__maps {
+  position: relative;
+  min-height: 362px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+  }
+}
+
+.location__image {
+  display: block;
+  z-index: 1;
+  margin: 0 auto;
 }

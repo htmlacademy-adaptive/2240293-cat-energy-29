@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link  href="css/style.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="manifest" href="img/favicons/site.webmanifest">
     <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link  href="css/style.min.css" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
@@ -18,13 +20,13 @@
       <header class="main-header">
         <a class="main-header__logo" href="index.html" ><span class="visually-hidden">На главную</span>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-cat-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-cat-tablet.svg">
-            <img src="img/logo-cat.svg" alt="Логотип сайта">
+            <source media="(min-width: 1440px)" srcset="img/logo-cat-desktop.svg" width="70" height="59">
+            <source media="(min-width: 768px)" srcset="img/logo-cat-tablet.svg" width="60" height="50">
+            <img src="img/logo-cat.svg" alt="Логотип сайта." width="33" height="38">
           </picture>
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo--transform" src="img/logo.svg" alt="Логотип сайта">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="101" height="18">
+            <img class="main-header__logo--transform" src="img/logo.svg" width="101" height="18" alt="Логотип сайта.">
           </picture>
         </a>
         <button class="main-header__toggle main-header__toggle--opened main-header__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -49,7 +51,7 @@
               <source type="image/webp" srcset="img/index/banner.webp 1x, img/index/banner@2x.webp 2x" width="280" height="270">
               <source media="(min-width: 1440px)" srcset="img/index/banner-desctop.png 1x, img/index/banner-desctop@2x.png 2x" width="552" height="499">
               <source media="(min-width: 768px)" srcset="img/index/banner-tablet.png 1x, img/index/banner-tablet@2x.png 2x" width="709" height="609">
-              <img src="img/index/banner.png" class="promo__image" srcset="img/index/banner@2x.png 2x" width="280" height="270" alt="Функциональное питание для котов со вкусом курицы">
+              <img src="img/index/banner.png" class="promo__image" srcset="img/index/banner@2x.png 2x" width="280" height="270" alt="Функциональное питание для котов со вкусом курицы.">
             </picture>
             <a class="promo__link button" href="form.html">подобрать программу</a>
           </div>
@@ -79,7 +81,7 @@
         </section>
       </div>
       <section class="example">
-        <div class="wrapper">
+        <div class="wrapper example__grid">
           <h2 class="example__title">Живой пример</h2>
           <P class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </P>
           <div class="example__wrapper">
@@ -98,12 +100,16 @@
           <div class="example__slider">
             <div class="example__conteiner example__conteiner--before">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/index/cat-before-tablet.webp 1x, img/index/cat-before-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/index/cat-before.webp 1x, img/index/cat-before@2x.webp 2x" width="280" height="256">
                 <source media="(min-width: 768px)" srcset="img/index/cat-before-tablet.png 1x, img/index/cat-before-tablet@2x.png 2x" width="560" height="512">
                 <img class="example__image example__image--before" src="img/index/cat-before.png" width="280" height="256" srcset="img/index/cat-before@2x.png 2x" alt="Кот Барис до диеты с кормом Cat Energy Slim.">
               </picture>
             </div>
             <div class="example__conteiner example__conteiner--after">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/index/cat-after-tablet.webp 1x, img/index/cat-after-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/index/cat-after.webp 1x, img/index/cat-after@2x.webp 2x" width="280" height="256">
                 <source media="(min-width: 768px)" srcset="img/index/cat-after-tablet.png 1x, img/index/cat-after-tablet@2x.png 2x" width="560" height="512">
                 <img class="example__image example__image--after" src="img/index/cat-after.png" width="280" height="256" srcset="img/index/cat-after@2x.png 2x" alt="Кот Барис после диеты с кормом Cat Energy Slim.">
               </picture>
@@ -126,7 +132,17 @@
             <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
           </div>
         </div>
-        <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
+        <div class="location__maps">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x"  width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map.webp 1x, img/map.webp 2x" width="320" height="362">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768" height="400">
+            <img class="location__image" src="img/map.png" width="320" height="362" srcset="img/map@2x.png 2x" alt="Мы находимся здесь.">
+          </picture>
+          <iframe class="location__iframe" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
+        </div>
       </section>
     </main>
     <footer class="main-footer">

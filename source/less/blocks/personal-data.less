@@ -32,15 +32,19 @@
   width: 100%;
   .oswald;
   color: @color-dark;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  appearance: none;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.personal-data__item::-webkit-outer-spin-button,
+.personal-data__item::-webkit-inner-spin-button {
+  appearance: none;
 }
 
 .personal-data__item--error,

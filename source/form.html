@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link  href="css/style.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="manifest" href="img/favicons/site.webmanifest">
     <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link  href="css/style.min.css" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
@@ -18,13 +20,13 @@
       <header class="main-header">
         <a class="main-header__logo" href="index.html" ><span class="visually-hidden">На главную</span>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-cat-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-cat-tablet.svg">
-            <img src="img/logo-cat.svg" alt="Логотип сайта">
+            <source media="(min-width: 1440px)" srcset="img/logo-cat-desktop.svg" width="70" height="59">
+            <source media="(min-width: 768px)" srcset="img/logo-cat-tablet.svg" width="60" height="50">
+            <img src="img/logo-cat.svg" alt="Логотип сайта." width="33" height="38">
           </picture>
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo--transform" src="img/logo.svg" alt="Логотип сайта">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="101" height="18">
+            <img class="main-header__logo--transform" src="img/logo.svg" width="101" height="18" alt="Логотип сайта.">
           </picture>
         </a>
         <button class="main-header__toggle main-header__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -48,33 +50,33 @@
             <div class="form-program__group form-program__container">
               <h2 class="visually-hidden">Данные кота</h2>
               <label class="form-program__item personal-data">имя:<sup>*</sup>
-                <input class="personal-data__item" type="text" name="cat-name" value="Барсик" required>
+                <input class="personal-data__item" type="text" name="cat-name" value="Барсик"  placeholder="Барсик" required>
               </label>
               <label class="form-program__item personal-data">Вес&nbsp;(кг):<sup>*</sup>
-                <input class="personal-data__item" type="number" name="cat-weight" value="7" required>
+                <input class="personal-data__item" type="number" name="cat-weight" value="7" placeholder="7" required>
               </label>
               <label class="form-program__item personal-data">Возраст&nbsp;(лет):
-                <input class="personal-data__item" type="number" name="cat-age" value="7">
+                <input class="personal-data__item" type="number" name="cat-age" value="7" placeholder="7">
               </label>
             </div>
             <div class="form-program__group">
               <h2 class="visually-hidden">Вид программы</h2>
               <div class="form-program__radio">
                 <div class="form-program__container">
-                  <label class="form-program__item type-programm">
-                    <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="slim" checked>
-                    <span class="type-programm__radio"></span>
-                    Похудение
+                  <label class="form-program__item type-program">
+                    <input class="type-program__item visually-hidden" type="radio" name="type-program" value="slim" checked>
+                    <span class="type-program__radio"></span>
+                    <span class="type-program__text">Похудение</span>
                   </label>
-                  <label class="form-program__item type-programm">
-                    <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="pro" >
-                    <span class="type-programm__radio "></span>
-                    Набор массы
+                  <label class="form-program__item type-program">
+                    <input class="type-program__item visually-hidden" type="radio" name="type-program" value="pro" >
+                    <span class="type-program__radio "></span>
+                    <span class="type-program__text">Набор массы </span>
                   </label>
-                  <label class="form-program__item type-programm">
-                    <input class="type-programm__item visually-hidden" type="radio" name="type-programm" value="need-advice">
-                    <span class="type-programm__radio"></span>
-                    Не знаю (Нужен ваш совет)
+                  <label class="form-program__item type-program">
+                    <input class="type-program__item visually-hidden" type="radio" name="type-program" value="need-advice">
+                    <span class="type-program__radio"></span>
+                    <span class="type-program__text">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </div>
               </div>
@@ -85,14 +87,14 @@
             <div class="form-program__wrapper">
               <div class="form-program__item personal-data personal-data--email">
                 <label for="email">E&#8209;mail:<sup>*</sup></label>
-                <input class="personal-data__item" id="email" type="email" name="email" value="kuklachev@gmail.com" required>
+                <input class="personal-data__item" id="email" type="email" name="email" value="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" required>
                 <svg class="personal-data__icon" width="20" height="20">
                   <use href="img/sprite.svg#email"></use>
                 </svg>
               </div>
               <div class="form-program__item personal-data personal-data--phone">
                 <label for="phone">Телефон:<sup>*</sup></label>
-                <input class="personal-data__item" id="phone" type="tel" name="phone-number" value="8 (960) 900-60-90" required>
+                <input class="personal-data__item" id="phone" type="tel" name="phone-number" value="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" required>
                 <svg class="personal-data__icon" width="20" height="20">
                   <use href="img/sprite.svg#phone"></use>
                 </svg>
@@ -106,25 +108,25 @@
           </div>
           <div class="form-program__group form-program__container form-program__group--checkbox">
             <h2 class="form-program__subtitle">Дополнительно</h2>
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="checkbox" name="sweetener" checked>
-              <span class="type-programm__checkbox"></span>
-              сахарозаменитель
+            <label class="form-program__item type-program">
+              <input class="type-program__item visually-hidden" type="checkbox" name="sweetener" checked>
+              <span class="type-program__checkbox"></span>
+              <span class="type-program__text">сахарозаменитель </span>
             </label>
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="checkbox" name="water">
-              <span class="type-programm__checkbox"></span>
-              питьевая вода
+            <label class="form-program__item type-program">
+              <input class="type-program__item visually-hidden" type="checkbox" name="water">
+              <span class="type-program__checkbox"></span>
+              <span class="type-program__text">питьевая вода</span>
             </label>
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="checkbox" name="milk">
-              <span class="type-programm__checkbox "></span>
-              молоко
+            <label class="form-program__item type-program">
+              <input class="type-program__item visually-hidden" type="checkbox" name="milk">
+              <span class="type-program__checkbox "></span>
+              <span class="type-program__text">молоко</span>
             </label>
-            <label class="form-program__item type-programm">
-              <input class="type-programm__item visually-hidden" type="checkbox" name="vitamins">
-              <span class="type-programm__checkbox"></span>
-              витамины
+            <label class="form-program__item type-program">
+              <input class="type-program__item visually-hidden" type="checkbox" name="vitamins">
+              <span class="type-program__checkbox"></span>
+              <span class="type-program__text">витамины</span>
             </label>
           </div>
           <div class="form-program__container-button form-program__container">
@@ -140,7 +142,17 @@
             <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
           </div>
         </div>
-        <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
+        <div class="location__maps">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x"  width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map.webp 1x, img/map.webp 2x" width="320" height="362">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768" height="400">
+            <img class="location__image" src="img/map.png" width="320" height="362" srcset="img/map@2x.png 2x" alt="Мы находимся здесь.">
+          </picture>
+          <iframe class="location__iframe" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5987671362566!2d30.323734043569576!3d59.938799777285276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691232603551!5m2!1sru!2sru"></iframe>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
