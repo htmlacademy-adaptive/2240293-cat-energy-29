@@ -14,7 +14,14 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 23px;
+    margin-bottom: 18px;
+    padding-left: 57px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+    margin-bottom: 16px;
   }
 }
 
@@ -31,6 +38,16 @@
   height: 30px;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 3px;
+    left: -3px;
+  }
 }
 
 .type-program__item[type="radio"]:checked + .type-program__radio::before {
@@ -41,14 +58,20 @@
   background-color: @color-green;
   border-radius: 50%;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    margin: 9px;
+  }
 }
 
 .type-program__checkbox {
   position: absolute;
   left: 0;
   top: 0;
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #cdcdcd;
   margin-left: 2px;
 }
@@ -58,11 +81,13 @@
   width: 26px;
   height: 26px;
   content: "";
-  background-image: url("../../img/form/checkbox.svg");
+  background-image: url("../../img/form/checkbox-tablet.svg");
   background-position: center;
   background-repeat: no-repeat;
+  margin: auto;
 }
 
 .type-program__item:disabled ~ .type-program__text {
   opacity: 0.3;
 }
+

@@ -29,6 +29,9 @@
             <img class="main-header__logo--transform" src="img/logo.svg" width="101" height="18" alt="Логотип сайта.">
           </picture>
         </a>
+        <!--main-header__toggle--nojs / main-header__nav--nojs - класс для работы без JS,
+          main-header__toggle--closed -класс кнопки при открытом меню(крестик)main-header__toggle--opened - класс кнопки у открытого меню(крестик),
+          main-header__nav--closed - меню закрыто  main-header__nav--opened меню открыто-->
         <button class="main-header__toggle main-header__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-header__nav main-header__nav--closed main-header__nav--nojs main-nav">
           <ul class="main-nav__list">
@@ -111,9 +114,9 @@
                 <div class="product-card__image">
                   <a href="#" class="product-card__link">
                     <picture>
-                      <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/product-3-tablet.webp 1x, img/catalog/product-3-tablet@2x.webp 2x"   width="168" height="206">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/product-3-tablet.webp 1x, img/catalog/product-3-tablet@2x.webp 2x"   width="163" height="174">
                       <source type="image/webp" srcset="img/catalog/product-3.webp 1x, img/catalog/product-3@2x.webp 2x" width="68" height="76">
-                      <source media="(min-width: 768px)" srcset="img/catalog/product-2-tablet.png 1x, img/catalog/product-3-tablet@2x.png 2x" width="168" height="206">
+                      <source media="(min-width: 768px)" srcset="img/catalog/product-2-tablet.png 1x, img/catalog/product-3-tablet@2x.png 2x" width="163" height="174">
                       <img class="product-card__img"  loading="lazy" src="img/catalog/product-3.png" srcset="img/catalog/product-3@2x.png 2x" width="68" height="76" alt="Cat Energy PRO 500 г.">
                     </picture>
                   </a>
@@ -190,7 +193,7 @@
                   </div>
                   <div class="product-card__attribute">
                     <dt class="product-card__sign">Цена</dt>
-                    <dd class="product-card__meaning">700 ₽</dd>
+                    <dd class="product-card__meaning">400 ₽</dd>
                   </div>
                 </dl>
                 <button class="product-card__button button" type="button">заказать</button>
@@ -220,7 +223,7 @@
                   </div>
                   <div class="product-card__attribute">
                     <dt class="product-card__sign">Цена</dt>
-                    <dd class="product-card__meaning">1000 ₽</dd>
+                    <dd class="product-card__meaning">700 ₽</dd>
                   </div>
                 </dl>
                 <button class="product-card__button button" type="button">заказать</button>
@@ -250,7 +253,7 @@
                   </div>
                   <div class="product-card__attribute">
                     <dt class="product-card__sign">Цена</dt>
-                    <dd class="product-card__meaning">700 ₽</dd>
+                    <dd class="product-card__meaning">500 ₽</dd>
                   </div>
                 </dl>
                 <button class="product-card__button button" type="button">заказать</button>
@@ -307,7 +310,7 @@
               </li>
             </ul>
             <div class="additional__gift gift">
-              <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+              <p class="gift__text">Закажите все <br>и получите чехол для кота в подарок!</p>
             </div>
           </div>
         </div>
@@ -316,7 +319,7 @@
       <section class="location">
         <div class="location__container">
           <div class="location__wrapper">
-            <h2 class="location_title">приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="location_title">приглашаем <br>к сотрудничеству дилеров!</h2>
             <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
           </div>
         </div>
@@ -343,7 +346,7 @@
         <ul class="main-footer__socials socials">
           <li class="socials__item">
             <a href="#" class="socials__link"><span class="visually-hidden">Вконтакте</span>
-              <svg width="27" height="17">
+              <svg width="28" height="22">
                 <use href="img/sprite.svg#vk"></use>
               </svg>
             </a>

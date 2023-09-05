@@ -7,7 +7,7 @@
     padding-top: 45px;
     padding-bottom: 101px;
     background-color: transparent;
-    background-image: linear-gradient(to bottom, @color-white 50% ; @color-grey-100 50%);
+    background-image: linear-gradient(to bottom, @color-white 57% ; @color-grey-100 57%);
   }
 
   @media (min-width: @desktop-width) {
@@ -21,15 +21,16 @@
 .example__grid {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 450px auto;
+    grid-template-columns: 433px auto;
     grid-template-rows: auto auto auto;
     align-items: start;
+    gap: 50px 217px;
   }
 }
 
 .example__title {
   @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
+    margin-bottom: 59px;
   }
 }
 
@@ -41,12 +42,12 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-top: 18px;
+    padding-top: 27px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 70px;
-    padding-bottom: 69px;
+    padding-top: 36px;
+    padding-bottom: 4px;
   }
 }
 
@@ -54,22 +55,25 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop-width) {
     width: 366px;
     flex-wrap: wrap;
+    margin: 0;
   }
 }
 
 .example__list {
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 35px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    margin-top: 16px;
   }
 }
 
@@ -140,11 +144,12 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    margin-top: 32px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    margin-top: 55px;
+    margin-top: 61px;
   }
 }
 
@@ -164,16 +169,19 @@
   width: 280px;
   height: 256px;
   margin: 0 auto;
+  margin-top: 20px;
 
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
+    margin-top: 70px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
     justify-content: center;
+    margin-top: 0;
   }
 }
 

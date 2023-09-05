@@ -29,6 +29,9 @@
             <img class="main-header__logo--transform" src="img/logo.svg" width="101" height="18" alt="Логотип сайта.">
           </picture>
         </a>
+        <!--main-header__toggle--nojs / main-header__nav--nojs - класс для работы без JS,
+          main-header__toggle--closed -класс кнопки при открытом меню(крестик)main-header__toggle--opened - класс кнопки у открытого меню(крестик),
+          main-header__nav--closed - меню закрыто  main-header__nav--opened меню открыто-->
         <button class="main-header__toggle main-header__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-header__nav main-header__nav--closed main-header__nav--nojs main-nav">
           <ul class="main-nav__list">
@@ -104,10 +107,10 @@
           <div class="form-program__group form-program__container">
             <h2 class="form-program__subtitle">Комментарий </h2>
             <label class="visually-hidden" for="comment">Комментарий</label>
-            <textarea class="form-program__comment" name="comment" id="comment" cols="33" rows="10">Расскажите обо всех повадках кота</textarea>
+            <textarea class="form-program__comment" name="comment" id="comment" cols="33" rows="5">Расскажите обо всех повадках кота</textarea>
           </div>
           <div class="form-program__group form-program__container form-program__group--checkbox">
-            <h2 class="form-program__subtitle">Дополнительно</h2>
+            <h2 class="form-program__subtitle form-program__subtitle--margin">Дополнительно</h2>
             <label class="form-program__item type-program">
               <input class="type-program__item visually-hidden" type="checkbox" name="sweetener" checked>
               <span class="type-program__checkbox"></span>
@@ -138,7 +141,7 @@
       <section class="location">
         <div class="location__container">
           <div class="location__wrapper">
-            <h2 class="location_title">приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="location_title">приглашаем <br>к сотрудничеству дилеров!</h2>
             <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
           </div>
         </div>
@@ -165,7 +168,7 @@
         <ul class="main-footer__socials socials">
           <li class="socials__item">
             <a href="#" class="socials__link"><span class="visually-hidden">Вконтакте</span>
-              <svg width="27" height="17">
+              <svg width="28" height="22">
                 <use href="img/sprite.svg#vk"></use>
               </svg>
             </a>
