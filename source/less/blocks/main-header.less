@@ -1,10 +1,14 @@
 .main-header {
   padding-top: 13px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 23px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 56px;
@@ -54,8 +58,8 @@
 }
 
 .main-header__toggle {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border: none;
   background-color: transparent;
   background-position: center;
@@ -63,6 +67,8 @@
   cursor: pointer;
 
   &--opened {
+    width: 24px;
+    height: 24px;
     background-image: url("../../img/toggle.svg");
   }
 
@@ -95,7 +101,7 @@
     &--opened {
       position: absolute;
       left: 0;
-      top: 68px;
+      top: 65px;
       width: 100vw;
       min-height: 196px;
     }

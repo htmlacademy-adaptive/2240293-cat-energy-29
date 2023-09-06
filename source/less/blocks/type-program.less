@@ -1,0 +1,108 @@
+.type-program {
+  position: relative;
+  .oswald;
+  font-size: 16px;
+  line-height: 18px;
+  color: @color-dark;
+  text-transform: uppercase;
+  padding-left: 45px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 18px;
+    padding-left: 57px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.type-program:focus-within .type-program__checkbox,
+.type-program:focus-within .type-program__radio {
+  outline: 1px solid @color-black;
+}
+
+.type-program__radio {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 3px;
+    left: -3px;
+  }
+}
+
+.type-program__item[type="radio"]:checked + .type-program__radio::before {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin: 8px;
+  background-color: @color-green;
+  border-radius: 50%;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    margin: 9px;
+  }
+}
+
+.type-program__checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  margin-left: 2px;
+
+  @media (min-width: @tablet-width) {
+    left: -1px;
+    top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.type-program__item[type="checkbox"]:checked + .type-program__checkbox::before {
+  display: block;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background-image: url("../../img/form/checkbox.svg");
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 7px auto;
+    background-size: 26px;
+  }
+}
+
+.type-program__item:disabled ~ .type-program__text {
+  opacity: 0.3;
+}

@@ -1,6 +1,6 @@
 .additional-card {
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 11px;
+  padding-bottom: 18px;
   border: 1px solid #cdcdcd;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -12,7 +12,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 26px 38px 26px;
+    padding: 14px 38px 24px;
     border-left-color: #cdcdcd;
     border-right-color: #cdcdcd;
     flex-direction: row;
@@ -24,7 +24,8 @@
   @media (min-width: @desktop-width) {
     border-left: none;
     border-right: none;
-    padding: 15px 0 17px;
+    padding: 15px 0;
+    align-items: center;
   }
 }
 
@@ -56,9 +57,12 @@
 }
 
 .additional-card__button {
-  padding: 8px;
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 244px;
+    margin: 0;
   }
 }

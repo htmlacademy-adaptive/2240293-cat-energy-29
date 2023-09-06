@@ -3,13 +3,13 @@
   padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 68px;
+    padding-top: 60px;
     padding-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 75px;
-    padding-bottom: 85px;
+    padding-bottom: 89px;
   }
 }
 
@@ -25,7 +25,7 @@
   margin-top: 36px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 80px;
+    margin-top: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,8 +42,13 @@
   background-color: @color-white;
 
   @media (min-width: @tablet-width) {
-    padding: 0 40px;
-    margin-left: -40px;
+    padding: 4px 40px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-bottom: 7px;
   }
 
   &::before {
@@ -68,5 +73,17 @@
     width: 100vw;
     height: 2px;
     z-index: -1;
+  }
+}
+
+.additional__gift {
+  margin: 35px auto 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto 0 0 80px;
   }
 }
