@@ -70,10 +70,20 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #cdcdcd;
   margin-left: 2px;
+
+  @media (min-width: @tablet-width) {
+    left: -1px;
+    top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .type-program__item[type="checkbox"]:checked + .type-program__checkbox::before {
@@ -81,10 +91,16 @@
   width: 26px;
   height: 26px;
   content: "";
-  background-image: url("../../img/form/checkbox-tablet.svg");
+  background-image: url("../../img/form/checkbox.svg");
+  background-size: 22px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: auto;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 7px auto;
+    background-size: 26px;
+  }
 }
 
 .type-program__item:disabled ~ .type-program__text {
