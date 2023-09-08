@@ -2,6 +2,7 @@
   @media (max-width: 767px) {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     min-height: 196px;
@@ -12,9 +13,10 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: start;
     width: 100%;
+    margin-left: 40px;
   }
 }
 

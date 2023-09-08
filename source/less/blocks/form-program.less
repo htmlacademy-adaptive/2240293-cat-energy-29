@@ -4,7 +4,7 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    padding: 24px 40px 39px;
+    padding: 24px 0 39px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,6 +23,7 @@
 
 .form-program__desc {
   margin: 37px 0;
+  min-height: 36px;
   padding-right: 10px;
   .oswald;
   color: @color-black;
@@ -69,7 +70,7 @@
   }
 }
 
-.form-program__group--checkbox {
+.form-program__group-checkbox {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 345px auto;
@@ -99,6 +100,7 @@
   background-color: @color-white;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -111,39 +113,34 @@
     margin-left: -40px;
 
     &--margin {
-      margin-bottom: 40px;
+      margin-bottom: 57px;
     }
   }
 
   @media (min-width: @desktop-width) {
     grid-row: 1 / 2;
     grid-column: 1 / 5;
-    margin-bottom: 59px;
+    margin-bottom: 57px;
+
+    &--margin {
+      margin-bottom: 35px;
+    }
   }
 }
 
-.form-program__subtitle::before {
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  content: "";
-  background-color: @color-green;
-  width: 100vw;
-  height: 2px;
-  z-index: -1;
+.form-program__decor {
+  position: relative;
+  width: 100%;
 }
 
-.form-program__subtitle::after {
-  position: absolute;
-  left: 13px;
-  top: 50%;
-  transform: translateY(-50%);
+.form-program__decor::after {
   content: "";
-  background-color: @color-green;
-  width: 89vw;
   height: 2px;
-  z-index: -1;
+  background-color: @color-green;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
 }
 
 .form-program__radio {
@@ -184,16 +181,17 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
     margin-top: 12px;
     padding-top: 11px;
     padding-left: 19px;
-    padding-bottom: 5px;
+    padding-bottom: 12px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 70px;
     margin-top: 18px;
+    padding-bottom: 5px;
   }
 }
 
@@ -209,7 +207,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 41px;
+    margin-top: 25px;
   }
 }
 
@@ -225,7 +223,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 18px;
+    margin-top: 2px;
   }
 }
 

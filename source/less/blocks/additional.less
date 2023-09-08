@@ -34,6 +34,10 @@
 }
 
 .additional__title {
+  .oswald ;
+  color: @color-black;
+  font-size: 24px;
+  line-height: 24px;
   position: relative;
   display: block;
   width: fit-content;
@@ -42,6 +46,8 @@
   background-color: @color-white;
 
   @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
     padding: 4px 40px;
     margin-left: 0;
   }
@@ -50,30 +56,21 @@
     padding: 0 40px 7px;
     margin-left: -40px;
   }
+}
 
-  &::before {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    content: "";
-    background-color: @color-green;
-    width: 100vw;
-    height: 2px;
-    z-index: -1;
-  }
+.additional__decor {
+  position: relative;
+}
 
-  &::after {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    content: "";
-    background-color: @color-green;
-    width: 100vw;
-    height: 2px;
-    z-index: -1;
-  }
+.additional__decor::before {
+  content: "";
+  width: 100vw;
+  height: 2px;
+  background-color: @color-green;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
 }
 
 .additional__gift {
