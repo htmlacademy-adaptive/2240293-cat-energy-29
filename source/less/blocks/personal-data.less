@@ -9,7 +9,6 @@
   text-transform: uppercase;
   width: 100%;
   text-align: center;
-  margin-bottom: 14px;
 
   &:focus-within .personal-data__icon {
     stroke: @color-green;
@@ -18,7 +17,6 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -27,7 +25,7 @@
 }
 
 .personal-data__item {
-  padding: 14px 40px 9px 15px;
+  padding: 14px 40px 9px 13px;
   margin-left: 15px;
   width: 100%;
   .oswald;
@@ -35,11 +33,13 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     padding: 11px 40px 7px 17px;
+    margin-bottom: 20px;
   }
 }
 
@@ -64,17 +64,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 62px;
+    margin-bottom: 46px;
   }
 }
 
 .personal-data--phone {
   @media (min-width: @tablet-width) {
-    margin-top: 19px;
-    margin-bottom: 65px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 17px;
     margin-bottom: 46px;
   }
 }
@@ -82,7 +82,12 @@
 .personal-data__icon {
   stroke: @color-black;
   position: absolute;
-  top: 50%;
-  right: 14px;
+  top: 40%;
+  right: 12px;
   transform: translateY(-50%);
+
+  @media (min-width: @desktop-width) {
+    top: 36%;
+    right: 15px;
+  }
 }
