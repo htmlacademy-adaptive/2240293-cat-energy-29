@@ -58,7 +58,7 @@
 }
 
 
-.products--slim::after {
+.products__item--slim::after {
   position: absolute;
   left: 27px;
   top: 21px;
@@ -89,7 +89,7 @@
   }
 }
 
-.products--pro::after {
+.products__item--pro::after {
   position: absolute;
   left: 13px;
   top: 35px;
@@ -185,7 +185,7 @@
 
 .products__link:hover::after {
   transition: right 0.1s;
-  right: 4px;
+  right: 5px;
 }
 
 .products__link:focus {
@@ -194,6 +194,30 @@
 
   &::after {
     transition: right 0.5s;
-    right: 4px;
+    right: 5px;
+  }
+}
+
+.products__title {
+  .oswald ;
+  color: @color-black;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 29px;
+  margin-left: 70px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
+    padding-left: 161px;
   }
 }

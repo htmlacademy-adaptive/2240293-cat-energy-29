@@ -18,7 +18,7 @@
   <body>
     <div class="wrapper">
       <header class="main-header">
-        <a class="main-header__logo" href="index.html" ><span class="visually-hidden">На главную</span>
+        <a class="main-header__logo logo" href="index.html" ><span class="visually-hidden">На главную</span>
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-cat-desktop.svg" width="70" height="59">
             <source media="(min-width: 768px)" srcset="img/logo-cat-tablet.svg" width="60" height="50">
@@ -26,13 +26,13 @@
           </picture>
           <picture>
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="101" height="18">
-            <img class="main-header__logo--transform" src="img/logo.svg" width="101" height="18" alt="Логотип сайта.">
+            <img class="logo__img logo__img--transform" src="img/logo.svg" width="101" height="18" alt="Логотип сайта.">
           </picture>
         </a>
         <!--main-header__toggle--nojs / main-header__nav--nojs - класс для работы без JS,
           main-header__toggle--closed -класс кнопки при открытом меню(крестик)main-header__toggle--opened - класс кнопки у открытого меню(крестик),
           main-header__nav--closed - меню закрыто  main-header__nav--opened меню открыто-->
-        <button class="main-header__toggle main-header__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-header__toggle main-header__toggle--opened main-header__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-header__nav main-header__nav--closed main-header__nav--nojs main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
@@ -85,63 +85,86 @@
               </div>
             </div>
           </div>
-          <div class="form-program__group form-program__container">
-            <h2 class="form-program__subtitle">Контактные данные (владельца кота)</h2>
-            <div class="form-program__wrapper">
-              <div class="form-program__item personal-data personal-data--email">
-                <label for="email">E&#8209;mail:<sup>*</sup></label>
-                <input class="personal-data__item" id="email" type="email" name="email" value="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" required>
-                <svg class="personal-data__icon" width="20" height="20">
-                  <use href="img/sprite.svg#email"></use>
-                </svg>
+        </div>
+          <div class="form-program__group">
+            <div class="form-program__decor">
+              <div class="wrapper wrapper--reset form-program__container">
+                <h2 class="form-program__subtitle">Контактные данные (владельца кота)</h2>
               </div>
-              <div class="form-program__item personal-data personal-data--phone">
-                <label for="phone">Телефон:<sup>*</sup></label>
-                <input class="personal-data__item" id="phone" type="tel" name="phone-number" value="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" required>
-                <svg class="personal-data__icon" width="20" height="20">
-                  <use href="img/sprite.svg#phone"></use>
-                </svg>
+            </div>
+            <div class="wrapper wrapper--reset">
+              <div class="form-program__wrapper form-program__container">
+                <div class="form-program__item personal-data personal-data--email">
+                  <label for="email">E&#8209;mail:<sup>*</sup></label>
+                  <input class="personal-data__item" id="email" type="email" name="email" value="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" required>
+                  <svg class="personal-data__icon" width="20" height="20">
+                    <use href="img/sprite.svg#email"></use>
+                  </svg>
+                </div>
+                <div class="form-program__item personal-data personal-data--phone">
+                  <label for="phone">Телефон:<sup>*</sup></label>
+                  <input class="personal-data__item" id="phone" type="tel" name="phone-number" value="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" required>
+                  <svg class="personal-data__icon" width="20" height="20">
+                    <use href="img/sprite.svg#phone"></use>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
-          <div class="form-program__group form-program__container">
-            <h2 class="form-program__subtitle">Комментарий </h2>
-            <label class="visually-hidden" for="comment">Комментарий</label>
-            <textarea class="form-program__comment" name="comment" id="comment" cols="33" rows="5">Расскажите обо всех повадках кота</textarea>
+          <div class="form-program__group">
+            <div class="form-program__decor">
+              <div class="wrapper wrapper--reset form-program__container">
+                <h2 class="form-program__subtitle">Комментарий </h2>
+              </div>
+            </div>
+            <div class="wrapper wrapper--reset form-program__container">
+              <label class="visually-hidden" for="comment">Комментарий</label>
+              <textarea class="form-program__comment" name="comment" id="comment" cols="33" rows="5">Расскажите обо всех повадках кота</textarea>
+            </div>
           </div>
-          <div class="form-program__group form-program__container form-program__group--checkbox">
-            <h2 class="form-program__subtitle form-program__subtitle--margin">Дополнительно</h2>
-            <label class="form-program__item type-program">
-              <input class="type-program__item visually-hidden" type="checkbox" name="sweetener" checked>
-              <span class="type-program__checkbox"></span>
-              <span class="type-program__text">сахарозаменитель </span>
-            </label>
-            <label class="form-program__item type-program">
-              <input class="type-program__item visually-hidden" type="checkbox" name="water">
-              <span class="type-program__checkbox"></span>
-              <span class="type-program__text">питьевая вода</span>
-            </label>
-            <label class="form-program__item type-program">
-              <input class="type-program__item visually-hidden" type="checkbox" name="milk">
-              <span class="type-program__checkbox "></span>
-              <span class="type-program__text">молоко</span>
-            </label>
-            <label class="form-program__item type-program">
-              <input class="type-program__item visually-hidden" type="checkbox" name="vitamins">
-              <span class="type-program__checkbox"></span>
-              <span class="type-program__text">витамины</span>
-            </label>
+          <div class="form-program__group">
+            <div class="form-program__decor">
+              <div class="wrapper wrapper--reset form-program__container">
+                <h2 class="form-program__subtitle form-program__subtitle--margin">Дополнительно</h2>
+              </div>
+            </div>
+            <div class="wrapper wrapper--reset form-program__container">
+              <div class="form-program__group-checkbox">
+                <label class="form-program__item type-program">
+                  <input class="type-program__item visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="type-program__checkbox"></span>
+                  <span class="type-program__text">сахарозаменитель </span>
+                </label>
+                <label class="form-program__item type-program">
+                  <input class="type-program__item visually-hidden" type="checkbox" name="water">
+                  <span class="type-program__checkbox"></span>
+                  <span class="type-program__text">питьевая вода</span>
+                </label>
+                <label class="form-program__item type-program">
+                  <input class="type-program__item visually-hidden" type="checkbox" name="milk">
+                  <span class="type-program__checkbox "></span>
+                  <span class="type-program__text">молоко</span>
+                </label>
+                <label class="form-program__item type-program">
+                  <input class="type-program__item visually-hidden" type="checkbox" name="vitamins">
+                  <span class="type-program__checkbox"></span>
+                  <span class="type-program__text">витамины</span>
+                </label>
+              </div>
+            </div>
           </div>
-          <div class="form-program__container-button form-program__container">
-            <input class="form-program__buttom button" type="submit" value="отправить заявку">
-            <p class="form-program__legend">* — Обязательные поля</p>
+          <div class="wrapper wrapper--reset">
+            <div class="form-program__container-button form-program__container">
+              <input class="form-program__buttom button" type="submit" value="отправить заявку">
+              <p class="form-program__legend">* — Обязательные поля</p>
+            </div>
           </div>
         </div>
       </form>
       <section class="location">
         <div class="location__container">
           <div class="location__wrapper">
-            <h2 class="location_title">приглашаем <br>к сотрудничеству дилеров!</h2>
+            <h2 class="location__title">приглашаем <br>к сотрудничеству дилеров!</h2>
             <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span class="location__sity"> Санкт-Петербург</span></address>
           </div>
         </div>
@@ -167,28 +190,28 @@
         </a>
         <ul class="main-footer__socials socials">
           <li class="socials__item">
-            <a href="#" class="socials__link"><span class="visually-hidden">Вконтакте</span>
+            <a href="https://vk.com/htmlacademy" class="socials__link"><span class="visually-hidden">Вконтакте</span>
               <svg width="27" height="17">
                 <use href="img/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link"><span class="visually-hidden">YouTube канал</span>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="socials__link"><span class="visually-hidden">YouTube канал</span>
               <svg width="24" height="19">
                 <use href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link"><span class="visually-hidden">Телеграмм</span>
+            <a href="https://t.me/htmlacademy" class="socials__link"><span class="visually-hidden">Телеграмм</span>
               <svg width="20" height="18">
                 <use href="img/sprite.svg#telegram"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="main-footer__partner-link" href="#" ><span class="main-footer__partner-text">HTML Academy</span>
+        <a class="main-footer__partner-link" href="https://htmlacademy.ru/" ><span class="main-footer__partner-text">HTML Academy</span>
           <svg class="main-footer__icon" width="27" height="35">
             <use href="img/sprite.svg#html-academy"></use>
           </svg>
