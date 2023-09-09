@@ -4,13 +4,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     padding-top: 23px;
+    flex-wrap: nowrap;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 56px;
+    padding-top: 54px;
+
+    &--position {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1220px;
+      z-index: 5;
+    }
   }
 }
 
@@ -68,6 +80,8 @@
     &--nojs {
       display: block;
       width: 100%;
+      margin: 0 -20px;
+      min-width: 320px;
     }
   }
 }
