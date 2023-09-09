@@ -18,6 +18,12 @@
     width: 100%;
     margin-left: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 42vw;
+    margin-left: auto;
+    justify-content: end;
+  }
 }
 
 .main-nav__item {
@@ -31,11 +37,7 @@
     border: none;
     padding-top: 14px;
     padding-bottom: 9px;
-    margin-right: 3px;
-
-    &:not(:last-child) {
-      margin-right: 34px;
-    }
+    margin-left: 34px;
 
     &--active {
       border-bottom: 2px solid @color-green;
